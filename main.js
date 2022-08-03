@@ -69,9 +69,9 @@ if(scoreLeftWrist > 0.2){
 }
 
 function play(){
-song_variable.isPlaying();
+song_1.isPlaying();
 }
 
 function stop(){
-song_variable.stop();
+song_2.stop();
 }
