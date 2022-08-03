@@ -55,9 +55,8 @@ function draw(){
     fill("#FF0000");
     stroke("#FF0000");
 
-if(scoreLefttWrist > 0.2){
+if(scoreLeftWrist > 0.2){
     circle(leftWristX,leftWristY,20);
-
     song_2.stop();
 
     if(song_1.stop() == false){
