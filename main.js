@@ -60,14 +60,15 @@ function draw(){
 if(scoreLeftWrist > 0.2){
     circle(leftWristX, leftWristY, 20);
 
-    song_2 = song_2.stop();
+    song_2.stop();
 
 
 
-if(song1 == false){
-    song_1 = song_1.isPlaying();
+if(song_1 == false){
 
-    document.getElementById("song_name").innerHTML = "Peter Pan Song" + song_1;
+    song_1.play();
+
+    document.getElementById("song_name").innerHTML = "Peter Pan Song";
 
 }
 }
@@ -80,9 +81,9 @@ if(scoreRightWrist > 0.2){
     song_1 = song_1.stop();
 
 if(song_2 == false){
-    song_2 = song_2.isPlaying();
+    song_2.play();
 
-    document.getElementById("song_name").innerHTML = "Harry Potter Theme Song" + song_2;
+    document.getElementById("song_name").innerHTML = "Harry Potter Theme Song";
 }
 }
 }
