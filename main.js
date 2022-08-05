@@ -50,28 +50,39 @@ function gotPoses(results){
 }
 
 function draw(){
-    image(video, 0, 0, 300, 300);
+    image(video, 0, 0, 600, 500);
 
-    fill("#FF0000");
-    stroke("#FF0000");
+    song_1 = song_1.isPlaying();
+
+    fill("FF0000");
+    stroke("FF0000");
 
 if(scoreLeftWrist > 0.2){
-    circle(leftWristX,leftWristY,20);
-    song_2.stop();
+    circle(leftWristX, leftWristY, 20);
 
-    if(song_1.stop() == false){
-        song_1.play();
-        song_1 = document.getElementById("song_name").innerHTML = "Harry Potter Theme Song";
+    song_2 = song_2.stop();
+
+
+
+if(song1 == false){
+    song_1 = song_1.isPlaying();
+
+    document.getElementById("song_name").innerHTML = "Peter Pan Song" + song_1;
+
 }
 }
 
+song_2 = song_2.isPlaying();
 
+if(scoreRightWrist > 0.2){
+    circle(rightWristX, rightWristY, 20);
+
+    song_1 = song_1.stop();
+
+if(song_2 == false){
+    song_2 = song_2.isPlaying();
+
+    document.getElementById("song_name").innerHTML = "Harry Potter Theme Song" + song_2;
 }
-
-function play(){
-song_1.isPlaying();
 }
-
-function stop(){
-song_2.stop();
 }
